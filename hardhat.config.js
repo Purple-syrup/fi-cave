@@ -9,20 +9,20 @@ require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 const PRIVATE_KEY1 = process.env.PRIVATE_KEY;
-const FVM_RPC_URL= process.env.FVM_RPC_URL;
+const BSC_RPC_URL= process.env.BSC_RPC_URL;
 // const COINMARKETCAP_API = process.env.COINMARKETCAP_API;
-const FILESCAN_API = process.env.FILESCAN_API;
+const BSCSCAN_API = process.env.BSCSCAN_API;
 module.exports = {
-    defaultNetwork: "fvm",
+    defaultNetwork: "bsctest",
     networks: {
         hardhat: {
             chainId: 31337,
             blockConfirmations: 1,
         },
-        fvm: {
-            chainId: 3141,
+        bsctest: {
+            chainId: 97,
             blockConfirmations: 2,
-            url: FVM_RPC_URL,
+            url: BSC_RPC_URL,
             saveDeployments: true,
             accounts: [PRIVATE_KEY1]
             // accounts:{
@@ -38,10 +38,10 @@ module.exports = {
         deployer: {
             default: 0,
             1: 0,
-            3141: 0,
+            97: 0,
         },
         player: {
-            default: 3141,
+            default: 97,
         },
     },
     // gasReporter: {
@@ -57,7 +57,7 @@ module.exports = {
     },
     etherscan: {
         apiKey: {
-            fvm: FILESCAN_API,
+            bscTestnet: BSCSCAN_API,
         },
     },
 };

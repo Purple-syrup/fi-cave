@@ -25,7 +25,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         "___________________________________________________________________________________________"
     );
 
-    if (!developmentChains.includes(network.name) && process.env.ETHERSCANAPI) {
+    if (!developmentChains.includes(network.name) && process.env.BSCSCAN_API) {
         console.log("Verifying .....");
         await verify(MedArchive.address, args);
     }

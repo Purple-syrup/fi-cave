@@ -11,7 +11,7 @@
 - [Technologies Used](#technologies-used)
     - [NFT.Storage/IPFS](#nftstorageipfs)
     - [Backend Server/Api](#backend-serverapipython-flask)
-    - [Filecoin Hyperspace cChain](#filecoin-hyperspace-chain)
+    - [Binance smart Chain](#binance-smart-chain)
     - [Smart Contract](#solidity-smart-contracts)
     - [Wagmi Kit](#wagmi-kit)
 - [Important Live Links](#importantlive-hosted-project-links)
@@ -25,7 +25,7 @@
 #
 > ## Project Description
 
-<p><b style="color:orange">Ficave is a decentralised medical documentation system,built on Fantom network.
+<p><b style="color:orange">Ficave is a decentralised medical documentation system,built on BSC network.
 
 Ficave is the first medical ledger on the blockchain,which makes it easy to upload,send,receive,and acess medical data’s on chain .
 </b> Files stored on Ficave are immutable and can’t be accessed without user  permission or password,confidential medical data can also be stored in private folders. 
@@ -38,12 +38,12 @@ Files uploaded on Ficave can also be made open-source to serve as  research mate
 ## Important/Live Hosted Project Links
 - **Hosted URL** > [https://ficave.on.fleek.co/](https://ficave.on.fleek.co/)
 
-- **Github** > [https://github.com/Godhanded/MedicalArchive_fullstack](https://github.com/Godhanded/MedicalArchive_fullstack)
+- **Github** > [https://github.com/Purple-syrup/fi-cave](https://github.com/Purple-syrup/fi-cave)
 
 - **Contract** > 
-   - Hyperspace_fvm [0xF281Afb262bA65fbD9d4BCfb2539aF1D064231ca](https://hyperspace.filfox.info/en/address/0xF281Afb262bA65fbD9d4BCfb2539aF1D064231ca)
+   - Binance Smart Chain [0x9B08fa696E8cC3Af0aDF34479bc16d245a35656a](https://testnet.bscscan.com/address/0x9B08fa696E8cC3Af0aDF34479bc16d245a35656a#code)
 
-    - Contract Code [here](https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/contracts/MedArchive.sol)
+    - Contract Code [here](https://github.com/Purple-syrup/fi-cave/blob/main/contracts/MedArchive.sol)
 
     - Contract details [here](#solidity-smart-contracts)
 
@@ -75,9 +75,9 @@ hospitals create or adds a patient using their name and that patient is issued a
 #
 > ## Contributors
 
-- Godhanded(Blockchain && Backend Dev)
+- Purple-syrup(Blockchain && Backend Dev)
     - [Twitter, @Godand](https://twitter.com/Godand_)
-    - [Github, @Godhanded](https://github.com/Godhanded) <br>
+    - [Github, @Purple-syrup](https://github.com/Purple-syrup) <br>
 - Miraclemenikelechi(Front-End dev)
     - [Twitter, @trinityandtruth](https://twitter.com/trinityandtruth?s=20&t=ZIj6s8ImLoDYIqEpV-qfKw)
     - [Github, @miraclemenikelechi](https://github.com/miraclemenikelechi)<br>
@@ -94,33 +94,33 @@ hospitals create or adds a patient using their name and that patient is issued a
  | **`React`**         | Frontend                   |
  | **`NFT.Storage/IPFS`**| file upload/retrieval  |
  | **`Wagmi Kit`**       | contract calls       |
- | **`Filecoin Hyperspace chain`** | Main contract deployed/Tracks all records|
+ | **`Binance smart Chain`** | Main contract deployed/Tracks all records|
  | **`Python Flask`**| Encrypt/Decrypt uploaded Records for contract to store|
 
 - ### **Solidity smart contracts**
-    ficavee makes use of a smart contracts see [contract](https://github.com/Godhanded/MedicalArchive_fullstack/tree/main/contracts)
+    ficavee makes use of a smart contracts see [contract](https://github.com/Purple-syrup/fi-cave/tree/main/contracts)
     - **MedArchive** The main or home contract through which tracks all hospitals and their respective patients.
     - <b style="color: orange">It also records in encrypted format using the hospitals passwordthe medical data of all patints</b>
 
 - ### **Backend Server/Api**_**Python Flask**
-    - <b style="color: orange">The Api or server</b>, we created performs two functions, encrypt the ipfs cid returned after a file is uploaded and return the encryption which makes use of <b style="color:orange">Fernet Encryption Methods and User defined password</b> to store in our smart contract. [code here](https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/Backend/securor/__init__.py#L51) and [here](https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/Backend/securor/__init__.py#L41)
+    - <b style="color: orange">The Api or server</b>, we created performs two functions, encrypt the ipfs cid returned after a file is uploaded and return the encryption which makes use of <b style="color:orange">Fernet Encryption Methods and User defined password</b> to store in our smart contract. [code here](https://github.com/Purple-syrup/fi-cave/blob/main/Backend/securor/__init__.py#L51) and [here](https://github.com/Purple-syrup/fi-cave/blob/main/Backend/securor/__init__.py#L41)
 
-    - Decrypt a list of Fernet hashes and return the Cids of the decrypted hashes to render on our frontend [see here](https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/Backend/securor/__init__.py#L57)
+    - Decrypt a list of Fernet hashes and return the Cids of the decrypted hashes to render on our frontend [see here](https://github.com/Purple-syrup/fi-cave/blob/main/Backend/securor/__init__.py#L57)
 
-    - See Backend Documentation [here](https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/Backend/README.md)
+    - See Backend Documentation [here](https://github.com/Purple-syrup/fi-cave/blob/main/Backend/README.md)
 
 - ### **NFT.Storage/IPFS**
-    - We used the nft.storage npm packed to interact and upload files to ipfs[see here](https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/frontend_fi/src/components/upload/Upload.jsx#L92) 
+    - We used the nft.storage npm packed to interact and upload files to ipfs[see here](https://github.com/Purple-syrup/fi-cave/blob/main/frontend_fi/src/components/upload/Upload.jsx#L92) 
 
 
-- ### **Filecoin Hyperspace Chain**
+- ### **Binance smart Chain**
     - The contract was <b style="color: orange">deployed on</b>this chain 
 
 
 - ### **Wagmi Kit**
     - <b style="color: orange">The Wagmikit</b>  was used to handle our connect wallet functiion
     ad contract calls
-    see [Contract here]:(https://github.com/Godhanded/MedicalArchive_fullstack/blob/main/frontend_fi/src/components/upload/Upload.jsx#L92)
+    see [Contract here]:(https://github.com/Purple-syrup/fi-cave/blob/main/frontend_fi/src/components/upload/Upload.jsx#L92)
 
 
 #
